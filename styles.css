@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --acc-color: lightseagreen;
+    /* #ff3c78 */
+}
+
+/** Master styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/** Nav styles */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+    background-color: #0a0a0a;
+    align-items: center;
+    color: white;
+}
+
+.left-side {
+    display: flex;
+}
+
+.nav-wrapper > .right-side > .brand > div {
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+}
+
+.nav-wrapper > .left-side > div {
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper a {
+    color: #a0a0a0;
+    text-decoration: none;
+    transition: 250ms;
+    position: relative;
+}
+
+.nav-link-wrapper a::after {
+    content: '';
+    position: absolute;
+    background-color: var(--acc-color);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -6px;
+
+    transition: 0.3s;
+}
+
+.nav-link-wrapper a:hover::after {
+    width: 100%;
+}
+
+.nav-link-wrapper a:hover{
+    color: #ffffff;
+}
+
+.active-nav-link a::after {
+    width: 100% !important;
+}
+
+.active-nav-link a {
+    color: white;
+}
+
+/** Portfolio styles */
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.portfolio-item-wrapper {
+    position: relative;
+}
+
+.portfolio-img-background {
+    height: 300px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.logo-wrapper img {
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+.img-text-wrapper .subtitle a {
+   transition: 1s;
+   font-weight: 600;
+   color: transparent; 
+   text-decoration: none;
+}
+
+.img-text-wrapper:hover .subtitle a{
+    color: lightseagreen;
+}
+
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/** about page */
+.two-column-wrapper {
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+}
+
+.profile-image-wrapper {
+    width: 100%;
+    height: 70%;
+}
+
+.profile-content-wrapper {
+    padding: 30px;
+    font-size: 20px;
+}
+
+.profile-content-wrapper h1 {
+    color: lightseagreen
+}
